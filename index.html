@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body class="animated-background">
+    <div class="container">
+        <h1>Resume Generator</h1>
+        <form id="resumeForm">
+            <label for="profilePicture">Profile Picture:</label>
+            <input type="file" id="profilePicture" accept="image/*" onchange="previewProfilePicture(event)">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" rows="3" required></textarea>
+
+            <label for="education">Education:</label>
+            <textarea id="education" rows="4" required></textarea>
+
+            <label for="experience">Experience:</label>
+            <textarea id="experience" rows="4" required></textarea>
+
+            <label for="skills">Skills:</label>
+            <textarea id="skills" rows="3" required></textarea>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+
+        <div id="resumeDisplay" class="resume-display"></div>
+
+        <div class="button-group">
+            <button type="button" onclick="downloadPDF()">Download PDF</button>
+            <button type="button" onclick="printResume()">Print CV</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

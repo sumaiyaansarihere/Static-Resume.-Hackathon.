@@ -1,0 +1,114 @@
+/* Background Animation */
+.animated-background {
+    position: relative;
+    min-height: 100vh; /* Allow the content to grow */
+    width: 100%;
+    background: linear-gradient(-45deg, #001f3f, #003366, #004080, #0059b3);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    padding-bottom: 50px; /* Space at the bottom for scrolling */
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #001f3f; /* Fallback color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 31, 63, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #FFFFFF;
+    animation: bounce 2s infinite;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+input, textarea {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #336699;
+    background-color: #001f3f;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #6699CC;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 153, 204, 0.5);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #0059b3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003d80;
+}
+
+.resume-display {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(0, 31, 63, 0.9); /* Dark blue background with slight transparency */
+    border-radius: 8px;
+    border: 1px solid #0059b3; /* Light blue border */
+    color: #FFFFFF;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
+}
